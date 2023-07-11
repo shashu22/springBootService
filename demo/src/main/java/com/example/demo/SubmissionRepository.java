@@ -16,7 +16,7 @@ public class SubmissionRepository implements SubmissionInterface{
         String id= String.valueOf(UUID.randomUUID());
         sf.setId(id);
         hashMap.put(id,sf);
-        return (SubmissionForm) hashMap.get(id);
+        return hashMap.get(id);
     }
 
     @Override
