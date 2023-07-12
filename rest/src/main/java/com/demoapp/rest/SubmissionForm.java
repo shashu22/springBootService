@@ -3,6 +3,14 @@ package com.demoapp.rest;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class SubmissionForm {
+
+    public String Name;
+    public String Id;
+    public String VendorName;
+    public int rate;
+    public String leadName;
+    public String Technology;
+
     public SubmissionForm(String name, String vendorName, int rate, String leadName, String technology) {
         this.Name=name;
         this.rate=rate;
@@ -14,7 +22,6 @@ public class SubmissionForm {
     public SubmissionForm(){
 
     }
-
 
     public void setName(String name) {
         Name = name;
@@ -36,10 +43,8 @@ public class SubmissionForm {
         Technology = technology;
     }
 
-    public String Name;
 
     @JsonIgnore
-
     public String getId() {
         return Id;
     }
@@ -47,13 +52,5 @@ public class SubmissionForm {
     public void setId(String id) {
         Id = id;
     }
-
-    public String Id;
-    public String VendorName;
-    public int rate;
-    public String leadName;
-    public String Technology;
-
-
 
 }

@@ -99,7 +99,7 @@ public class SubmissionRepositoryTest {
         existingForm.setRate(200);
 
 
-        SubmissionForm result = submissionRepository.editSubmission(existingForm);
+        SubmissionForm result = submissionRepository.editSubmission(existingForm, existingForm.getId());
 
         Assertions.assertEquals(existingForm, result);
         Assertions.assertEquals(existingForm, hashMap.get(existingForm.getId()));

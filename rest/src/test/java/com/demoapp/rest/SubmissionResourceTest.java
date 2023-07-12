@@ -87,15 +87,15 @@ public class SubmissionResourceTest {
         inputForm.setLeadName("Jane Smith");
         inputForm.setTechnology("Java");
 
-        when(submissionService.editSubmission(inputForm)).thenAnswer(invocation -> {
+        when(submissionService.editSubmission(inputForm, inputForm.Id)).thenAnswer(invocation -> {
             SubmissionForm form = invocation.getArgument(0);
             return form;
         });
 
-        SubmissionForm resultForm = submissionResource.editSubmission(inputForm);
+        SubmissionForm resultForm = submissionResource.editSubmission(inputForm, inputForm.getId());
 
         assertNotNull(resultForm.getId());
-        verify(submissionService, times(1)).editSubmission(inputForm);
+        verify(submissionService, times(1)).editSubmission(inputForm, inputForm.getId());
     }
 
     @Test

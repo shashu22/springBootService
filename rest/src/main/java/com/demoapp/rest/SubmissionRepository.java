@@ -36,9 +36,10 @@ public class SubmissionRepository implements SubmissionInterface{
     }
 
     @Override
-    public SubmissionForm editSubmission(SubmissionForm sf) {
-        hashMap.put(sf.Id,sf);
-        return hashMap.get(sf.Id);
+    public SubmissionForm editSubmission(SubmissionForm sf, String Id) {
+        sf.setId(Id);
+        hashMap.put(Id, sf);
+        return hashMap.get(Id);
     }
 
     @Override

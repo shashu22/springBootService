@@ -27,8 +27,8 @@ public class SubmissionService implements SubmissionInterface{
     }
 
     @Override
-    public SubmissionForm editSubmission(SubmissionForm sf) {
-        return submissionRepository.editSubmission(sf);
+    public SubmissionForm editSubmission(SubmissionForm sf, String Id) {
+        return submissionRepository.editSubmission(sf, Id);
     }
 
     @Override

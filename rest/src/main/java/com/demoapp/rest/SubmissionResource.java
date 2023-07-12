@@ -31,9 +31,9 @@ public class SubmissionResource implements SubmissionInterface {
     }
 
     @Override
-    @PutMapping("/edit")
-    public SubmissionForm editSubmission(@RequestBody SubmissionForm sf) {
-        return submissionService.editSubmission(sf);
+    @PutMapping("/edit/{Id}")
+    public SubmissionForm editSubmission(@RequestBody SubmissionForm sf, @PathVariable String Id) {
+        return submissionService.editSubmission(sf, Id);
     }
 
     @Override
